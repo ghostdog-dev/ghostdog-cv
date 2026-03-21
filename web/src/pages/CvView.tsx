@@ -24,61 +24,69 @@ function CvView() {
   return (
     <PageLayout>
       <div className="cv">
-        <section className="cv__header">
-          <div className="cv__header-top">
+        {/* ── Hero header ── */}
+        <section className="cv-hero">
+          <div className="cv-hero__avatar-ring">
             <img
-              className="cv__photo"
+              className="cv-hero__photo"
               src="/profile-bw.jpg"
               alt="Arthur Seguret"
             />
-            <div className="cv__header-info">
-              <div className="cv__header-row">
-                <h1 className="cv__name">{cv.meta.alias}</h1>
-                <a className="cv__download-btn" href={pdfUrl} download="GhostDog-CV.pdf">
-                  PDF
-                </a>
-              </div>
-              <p className="cv__real-name">{cv.meta.name}</p>
-              <p className="cv__title">{cv.meta.title}</p>
-              <div className="cv__contact">
-                <a href={`mailto:${cv.meta.contact.email}`}>{cv.meta.contact.email}</a>
-                <span className="cv__separator">|</span>
-                <a href={cv.meta.contact.github} target="_blank" rel="noopener noreferrer">GitHub</a>
-                <span className="cv__separator">|</span>
-                <a href={cv.meta.contact.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              </div>
+          </div>
+          <div className="cv-hero__body">
+            <div className="cv-hero__title-row">
+              <h1 className="cv-hero__alias">{cv.meta.alias}</h1>
+              <a className="cv-hero__pdf" href={pdfUrl} download="GhostDog-CV.pdf">
+                .pdf
+              </a>
+            </div>
+            <p className="cv-hero__realname">{cv.meta.name}</p>
+            <p className="cv-hero__role">{cv.meta.title}</p>
+            <div className="cv-hero__badges">
+              <span className="cv-hero__badge">{cv.meta.location}</span>
+              <span className="cv-hero__badge">{cv.meta.age} ans</span>
+            </div>
+            <div className="cv-hero__links">
+              <a href={`mailto:${cv.meta.contact.email}`}>{cv.meta.contact.email}</a>
+              <a href={cv.meta.contact.github} target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href={cv.meta.contact.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </div>
           </div>
         </section>
 
-        <section className="cv__section">
-          <h2 className="cv__section-title">
-            <span className="cv__section-prefix">#</span> Competences
+        {/* ── Skills ── */}
+        <section className="cv-section">
+          <h2 className="cv-section__heading">
+            <span className="cv-section__icon">~</span> Competences
           </h2>
-          <div className="cv__skills">
+          <div className="cv-skills">
             {Object.entries(cv.skills).map(([category, skills]) => (
               <SkillGroup key={category} category={category} skills={skills} />
             ))}
           </div>
         </section>
 
+        {/* ── Experience ── */}
         {cv.experience.length > 0 && (
-          <section className="cv__section">
-            <h2 className="cv__section-title">
-              <span className="cv__section-prefix">#</span> Experience
+          <section className="cv-section">
+            <h2 className="cv-section__heading">
+              <span className="cv-section__icon">~</span> Experience
             </h2>
-            {cv.experience.map((exp) => (
-              <ExperienceCard key={`${exp.company}-${exp.title}`} experience={exp} />
-            ))}
+            <div className="cv-timeline">
+              {cv.experience.map((exp) => (
+                <ExperienceCard key={`${exp.company}-${exp.title}`} experience={exp} />
+              ))}
+            </div>
           </section>
         )}
 
+        {/* ── Projets ── */}
         {cv.projects.length > 0 && (
-          <section className="cv__section">
-            <h2 className="cv__section-title">
-              <span className="cv__section-prefix">#</span> Projets
+          <section className="cv-section">
+            <h2 className="cv-section__heading">
+              <span className="cv-section__icon">~</span> Projets
             </h2>
-            <div className="cv__projects">
+            <div className="cv-grid">
               {cv.projects.map((project) => (
                 <ProjectCard key={project.name} project={project} />
               ))}
@@ -86,14 +94,47 @@ function CvView() {
           </section>
         )}
 
+        {/* ── Formation ── */}
         {cv.education.length > 0 && (
-          <section className="cv__section">
-            <h2 className="cv__section-title">
-              <span className="cv__section-prefix">#</span> Formation
+          <section className="cv-section">
+            <h2 className="cv-section__heading">
+              <span className="cv-section__icon">~</span> Formation
             </h2>
-            {cv.education.map((edu) => (
-              <EducationCard key={`${edu.school}-${edu.degree}`} education={edu} />
-            ))}
+            <div className="cv-timeline">
+              {cv.education.map((edu) => (
+                <EducationCard key={`${edu.school}-${edu.degree}`} education={edu} />
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* ── Langues & Intérêts ── */}
+        {(cv.languages.length > 0 || cv.interests.length > 0) && (
+          <section className="cv-section cv-section--compact">
+            <div className="cv-extras">
+              {cv.languages.length > 0 && (
+                <div className="cv-extras__group">
+                  <h3 className="cv-extras__label">Langues</h3>
+                  <div className="cv-extras__pills">
+                    {cv.languages.map((lang) => (
+                      <span key={lang.name} className="cv-pill cv-pill--ghost">
+                        {lang.name} <span className="cv-pill__sub">{lang.level}</span>
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+              {cv.interests.length > 0 && (
+                <div className="cv-extras__group">
+                  <h3 className="cv-extras__label">Centres d'interet</h3>
+                  <div className="cv-extras__pills">
+                    {cv.interests.map((interest) => (
+                      <span key={interest} className="cv-pill cv-pill--ghost">{interest}</span>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
           </section>
         )}
       </div>

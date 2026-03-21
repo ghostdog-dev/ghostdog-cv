@@ -7,13 +7,16 @@ interface ExperienceCardProps {
 
 function ExperienceCard({ experience }: ExperienceCardProps) {
   return (
-    <div className="cv__entry">
-      <div className="cv__entry-header">
-        <h3 className="cv__entry-title">{experience.title}</h3>
-        <span className="cv__entry-period">{experience.period}</span>
+    <div className="cv-card">
+      <div className="cv-card__top">
+        <div className="cv-card__meta">
+          <span className="cv-card__period">{experience.period}</span>
+          <span className="cv-card__dot">·</span>
+          <span className="cv-card__company">{experience.company}</span>
+        </div>
+        <h3 className="cv-card__title">{experience.title}</h3>
       </div>
-      <p className="cv__entry-company">{experience.company}</p>
-      <p className="cv__entry-description">{experience.description}</p>
+      <p className="cv-card__desc">{experience.description}</p>
       <TagList tags={experience.tags} />
     </div>
   );

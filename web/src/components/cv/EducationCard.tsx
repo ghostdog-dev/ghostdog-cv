@@ -6,13 +6,19 @@ interface EducationCardProps {
 
 function EducationCard({ education }: EducationCardProps) {
   return (
-    <div className="cv__entry">
-      <div className="cv__entry-header">
-        <h3 className="cv__entry-title">{education.degree}</h3>
-        <span className="cv__entry-period">{education.year}</span>
+    <div className="cv-card">
+      <div className="cv-card__top">
+        <div className="cv-card__meta">
+          <span className="cv-card__period">{education.year}</span>
+          <span className="cv-card__dot">·</span>
+          <span className="cv-card__company">{education.school}</span>
+        </div>
+        <h3 className="cv-card__title">{education.degree}</h3>
+        {education.level && (
+          <span className="cv-card__badge">{education.level}</span>
+        )}
       </div>
-      <p className="cv__entry-company">{education.school}</p>
-      <p className="cv__entry-description">{education.description}</p>
+      <p className="cv-card__desc">{education.description}</p>
     </div>
   );
 }

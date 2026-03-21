@@ -7,16 +7,16 @@ interface SkillGroupProps {
 
 function SkillGroup({ category, skills }: SkillGroupProps) {
   return (
-    <div className="cv__skill-group">
-      <h3 className="cv__skill-category">{category}</h3>
-      <div className="cv__skill-list">
+    <div className="cv-skill-group">
+      <h3 className="cv-skill-group__title">{category}</h3>
+      <div className="cv-skill-group__pills">
         {skills.map((skill) => (
-          <div key={skill.name} className="cv__skill">
-            <span className="cv__skill-name">{skill.name}</span>
-            {skill.level && <span className="cv__skill-level">{skill.level}</span>}
-            {skill.years && <span className="cv__skill-detail">{skill.years} ans</span>}
-            {skill.details && <span className="cv__skill-detail">{skill.details}</span>}
-          </div>
+          <span key={skill.name} className="cv-pill">
+            {skill.name}
+            {skill.level && (
+              <span className="cv-pill__level">{skill.level}</span>
+            )}
+          </span>
         ))}
       </div>
     </div>

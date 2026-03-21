@@ -6,13 +6,23 @@ interface ProjectCardProps {
 }
 
 function ProjectCard({ project }: ProjectCardProps) {
-  return (
-    <div className="cv__project">
-      <h3 className="cv__project-name">{project.name}</h3>
-      <p className="cv__project-description">{project.description}</p>
+  const inner = (
+    <div className="cv-minicard">
+      <h3 className="cv-minicard__name">{project.name}</h3>
+      <p className="cv-minicard__desc">{project.description}</p>
       <TagList tags={project.stack} />
     </div>
   );
+
+  if (project.url) {
+    return (
+      <a href={project.url} target="_blank" rel="noopener noreferrer" className="cv-minicard-link">
+        {inner}
+      </a>
+    );
+  }
+
+  return inner;
 }
 
 export default ProjectCard;
