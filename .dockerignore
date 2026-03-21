@@ -1,0 +1,15 @@
+web/
+cli/
+docs/
+*.md
+*.png
+.git/
+.gitignore
+.claude/
+node_modules/
+__pycache__/
+*.egg-info/
+setup.py
+setup.cfg
+MANIFEST.in
+pyproject.toml
