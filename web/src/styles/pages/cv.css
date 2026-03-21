@@ -1,0 +1,368 @@
+.cv {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  padding-top: var(--space-xl);
+}
+
+/* Header */
+.cv__header {
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--border);
+}
+
+.cv__header-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  text-align: center;
+}
+
+.cv__photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--border);
+  filter: grayscale(100%);
+}
+
+.cv__header-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.cv__header-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .cv__header-top {
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .cv__photo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .cv__header-row {
+    justify-content: flex-start;
+  }
+}
+
+.cv__name {
+  font-size: clamp(1.5rem, 6vw, 2rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.cv__download-btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: var(--space-xs) var(--space-md);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+  white-space: nowrap;
+}
+
+.cv__download-btn:hover {
+  background-color: var(--accent);
+  color: var(--bg-primary);
+}
+
+.cv__real-name {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+.cv__title {
+  font-size: var(--text-base);
+  color: var(--accent);
+}
+
+.cv__contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin-top: var(--space-sm);
+}
+
+.cv__separator {
+  display: none;
+}
+
+/* Sections */
+.cv__section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.cv__section-title {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.cv__section-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+  margin-left: var(--space-sm);
+}
+
+.cv__section-prefix {
+  color: var(--accent);
+  font-weight: 400;
+}
+
+/* Skills */
+.cv__skills {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+.cv__skill-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.cv__skill-category {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cv__skill-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.cv__skill {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-xs);
+  font-size: var(--text-sm);
+}
+
+.cv__skill-name {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.cv__skill-level {
+  color: var(--accent);
+  font-size: var(--text-xs);
+}
+
+.cv__skill-detail {
+  color: var(--text-secondary);
+  font-size: var(--text-xs);
+}
+
+/* Entries */
+.cv__entry {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: var(--space-md);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-base), background-color var(--transition-base);
+}
+
+.cv__entry:hover {
+  border-color: var(--border-hover);
+  background-color: var(--bg-hover);
+}
+
+.cv__entry-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.cv__entry-title {
+  font-size: var(--text-base);
+  font-weight: 600;
+}
+
+.cv__entry-period {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+.cv__entry-company {
+  font-size: var(--text-sm);
+  color: var(--accent);
+}
+
+.cv__entry-description {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: var(--leading-normal);
+}
+
+/* Projects */
+.cv__projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+}
+
+.cv__project {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: var(--space-md);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-base), background-color var(--transition-base);
+}
+
+.cv__project:hover {
+  border-color: var(--border-hover);
+  background-color: var(--bg-hover);
+}
+
+.cv__project-name {
+  font-size: var(--text-base);
+  font-weight: 600;
+}
+
+.cv__project-description {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+/* Tablet+ */
+@media (min-width: 768px) {
+  .cv {
+    gap: var(--space-2xl);
+    padding-top: var(--space-2xl);
+  }
+
+  .cv__contact {
+    flex-direction: row;
+    gap: var(--space-sm);
+  }
+
+  .cv__separator {
+    display: inline;
+    color: var(--text-muted);
+  }
+
+  .cv__skills {
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  }
+
+  .cv__entry {
+    padding: var(--space-lg);
+  }
+
+  .cv__entry-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .cv__projects {
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+    gap: var(--space-lg);
+  }
+
+  .cv__project {
+    padding: var(--space-lg);
+  }
+
+  .cv__section-title {
+    font-size: var(--text-xl);
+  }
+}
+
+/* Print — same dark design as screen */
+@media print {
+  @page {
+    size: A4;
+    margin: 1cm 1.5cm;
+  }
+
+  .header, .footer, .mobile-nav, .cv__download-btn {
+    display: none !important;
+  }
+
+  main {
+    padding: 0 !important;
+  }
+
+  .page {
+    padding: 0 !important;
+    max-width: none !important;
+  }
+
+  .cv {
+    gap: 10pt;
+    padding-top: 0;
+  }
+
+  .cv__contact {
+    flex-direction: row;
+    gap: 4pt;
+  }
+
+  .cv__separator {
+    display: inline;
+  }
+
+  .cv__skills {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8pt;
+  }
+
+  .cv__projects {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8pt;
+  }
+
+  .cv__entry {
+    break-inside: avoid;
+  }
+
+  .cv__entry-header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .cv__project {
+    break-inside: avoid;
+  }
+
+  .cv__section-title::after {
+    display: none;
+  }
+}

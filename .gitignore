@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Node
+node_modules/
+web/dist/
+
+# Env
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+nohup.out
+
+# Temp
+/tmp/
+
+# Screenshots
+*.png
+
+# Claude settings
+.claude/
+
+# Original photo (keep only B&W)
+data/1750226232088.jpeg

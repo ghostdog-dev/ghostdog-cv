@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ghostdog-cv"
+version = "1.0.0"
+description = "CV multi-rendu de GhostDog (Arthur Seguret) — version terminal"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Arthur Seguret", email = "ghostdogthe1@gmail.com"},
+]
+dependencies = [
+    "typer>=0.9",
+    "rich>=13.0",
+    "pyyaml>=6.0",
+    "requests>=2.28",
+]
+
+[project.scripts]
+ghostdog-cv = "cli.main:app"
+
+[tool.setuptools.packages.find]
+include = ["cli*", "data*"]
+
+[tool.setuptools.package-data]
+data = ["cv.yaml", "cv.pdf"]

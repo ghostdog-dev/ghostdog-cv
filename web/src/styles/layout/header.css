@@ -1,0 +1,178 @@
+/* ============================================
+   Skip link
+   ============================================ */
+.header__skip-link {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  color: var(--accent);
+  font-size: var(--text-sm);
+}
+
+.header__skip-link:focus {
+  position: static;
+  left: auto;
+  display: block;
+  padding: var(--space-sm) var(--space-md);
+  text-align: center;
+  background-color: var(--bg-secondary);
+}
+
+/* ============================================
+   Desktop header bar
+   ============================================ */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(18, 18, 26, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-md) var(--gutter);
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.header__logo:hover {
+  color: var(--text-primary);
+}
+
+.header__logo-symbol {
+  color: var(--accent);
+}
+
+/* Hide desktop nav on mobile */
+.header__nav-desktop {
+  display: none;
+}
+
+/* ============================================
+   Mobile bottom nav bar
+   ============================================ */
+.mobile-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: rgba(18, 18, 26, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid var(--border);
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+.mobile-nav__inner {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.mobile-nav__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  flex: 1;
+  min-height: 56px;
+  padding: var(--space-sm) 0;
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+  transition: color var(--transition-fast);
+  position: relative;
+}
+
+.mobile-nav__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 25%;
+  right: 25%;
+  height: 2px;
+  background-color: var(--accent);
+  border-radius: 0 0 2px 2px;
+  transform: scaleX(0);
+  transition: transform var(--transition-base);
+}
+
+.mobile-nav__item--active {
+  color: var(--accent);
+}
+
+.mobile-nav__item--active::before {
+  transform: scaleX(1);
+}
+
+.mobile-nav__icon {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  line-height: 1;
+  font-family: var(--font-mono);
+}
+
+.mobile-nav__label {
+  font-size: 0.625rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+}
+
+/* ============================================
+   Desktop: show header nav, hide bottom bar
+   ============================================ */
+@media (min-width: 768px) {
+  .mobile-nav {
+    display: none;
+  }
+
+  .header__logo {
+    font-size: var(--text-lg);
+  }
+
+  .header__nav-desktop {
+    display: flex;
+    gap: var(--space-sm);
+  }
+
+  .header__link {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    padding: var(--space-sm) var(--space-md);
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    border-radius: var(--radius-sm);
+    transition: color var(--transition-fast), background-color var(--transition-fast);
+    white-space: nowrap;
+  }
+
+  .header__link:hover {
+    color: var(--text-primary);
+    background-color: var(--bg-hover);
+  }
+
+  .header__link--active {
+    color: var(--accent);
+    background-color: var(--accent-subtle);
+  }
+}

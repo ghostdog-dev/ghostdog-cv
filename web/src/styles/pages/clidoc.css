@@ -1,0 +1,131 @@
+.clidoc {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  padding-top: var(--space-xl);
+}
+
+.clidoc__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.clidoc__title {
+  font-size: clamp(1.5rem, 6vw, 2rem);
+  font-weight: 800;
+}
+
+.clidoc__subtitle {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+}
+
+.clidoc__section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.clidoc__section-title {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.clidoc__section-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+  margin-left: var(--space-sm);
+}
+
+.clidoc__prefix {
+  color: var(--accent);
+  font-weight: 400;
+}
+
+.clidoc__code-block {
+  display: block;
+  padding: var(--space-md);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--text-primary);
+  overflow-x: auto;
+  white-space: pre;
+  -webkit-overflow-scrolling: touch;
+}
+
+.clidoc__code-block--terminal {
+  color: var(--text-secondary);
+  border-color: var(--accent-subtle);
+}
+
+.clidoc__commands {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.clidoc__command {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: var(--space-md);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+}
+
+.clidoc__cmd {
+  font-family: var(--font-mono);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.clidoc__desc {
+  color: var(--text-secondary);
+}
+
+.clidoc__repo-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: var(--text-sm);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.clidoc__repo-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (min-width: 768px) {
+  .clidoc {
+    gap: var(--space-2xl);
+    padding-top: var(--space-2xl);
+  }
+
+  .clidoc__section-title {
+    font-size: var(--text-xl);
+  }
+
+  .clidoc__code-block {
+    padding: var(--space-lg);
+    font-size: var(--text-sm);
+  }
+
+  .clidoc__command {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-md);
+  }
+}

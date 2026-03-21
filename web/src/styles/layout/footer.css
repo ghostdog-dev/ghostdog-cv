@@ -1,0 +1,61 @@
+/* Hide footer on mobile — bottom nav replaces it */
+.footer {
+  display: none;
+  border-top: 1px solid var(--border);
+  background-color: var(--bg-secondary);
+}
+
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-lg) var(--gutter);
+  text-align: center;
+}
+
+.footer__text {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+.footer__symbol {
+  color: var(--accent);
+}
+
+.footer__links {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.footer__links a {
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+  padding: var(--space-sm);
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer__links a:hover {
+  color: var(--accent);
+}
+
+@media (min-width: 768px) {
+  .footer {
+    display: block;
+  }
+
+  .footer__inner {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .footer__text,
+  .footer__links a {
+    font-size: var(--text-sm);
+  }
+}

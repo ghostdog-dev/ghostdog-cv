@@ -1,0 +1,15 @@
+.tag {
+  display: inline-block;
+  font-size: var(--text-xs);
+  color: var(--accent);
+  background-color: var(--accent-subtle);
+  padding: 2px var(--space-sm);
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}

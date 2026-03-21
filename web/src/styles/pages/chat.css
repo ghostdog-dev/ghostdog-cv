@@ -1,0 +1,122 @@
+.chat {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 48px - 72px);
+  height: calc(100dvh - 48px - 72px);
+  gap: var(--space-sm);
+}
+
+.chat__messages {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: var(--space-sm) 0;
+}
+
+.chat__error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+}
+
+.chat__error {
+  font-size: var(--text-sm);
+  color: var(--error);
+  text-align: center;
+}
+
+.chat__error-dismiss {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  padding: var(--space-xs) var(--space-md);
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.chat__error-dismiss:hover {
+  color: var(--text-secondary);
+  border-color: var(--border-hover);
+}
+
+.chat__form {
+  display: flex;
+  gap: var(--space-sm);
+  padding: var(--space-sm) 0;
+  border-top: 1px solid var(--border);
+}
+
+.chat__input {
+  flex: 1;
+  min-width: 0;
+  min-height: 44px;
+  padding: var(--space-md);
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 16px;
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.chat__input::placeholder {
+  color: var(--text-muted);
+}
+
+.chat__input:focus {
+  border-color: var(--accent);
+}
+
+.chat__input:focus-visible {
+  box-shadow: 0 0 0 2px var(--accent-subtle);
+}
+
+.chat__send {
+  padding: var(--space-md) var(--space-lg);
+  min-height: 44px;
+  background-color: var(--accent);
+  color: var(--bg-primary);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+  white-space: nowrap;
+}
+
+.chat__send:hover:not(:disabled) {
+  background-color: var(--accent-hover);
+}
+
+.chat__send:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+@media (min-width: 768px) {
+  .chat {
+    height: calc(100vh - 48px);
+    height: calc(100dvh - 48px);
+  }
+
+  .chat__input {
+    padding: var(--space-md) var(--space-lg);
+  }
+
+  .chat__send {
+    padding: var(--space-md) var(--space-xl);
+  }
+
+  .chat__form {
+    padding: var(--space-md) 0;
+  }
+}
