@@ -39,5 +39,8 @@ nohup.out
 # Claude settings
 .claude/
 
-# Original photo (keep only B&W)
+# Original photo
 data/1750226232088.jpeg
+
+# Egg info
+*.egg-info/

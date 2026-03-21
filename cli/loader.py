@@ -1,7 +1,7 @@
 from pathlib import Path
 import yaml
 
-_YAML_PATH = Path(__file__).parent.parent / "data" / "cv.yaml"
+_YAML_PATH = Path(__file__).parent / "data" / "cv.yaml"
 
 
 def load_cv() -> dict:

@@ -23,7 +23,7 @@ dependencies = [
 ghostdog-cv = "cli.main:app"
 
 [tool.setuptools.packages.find]
-include = ["cli*", "data*"]
+include = ["cli*"]
 
 [tool.setuptools.package-data]
-data = ["cv.yaml", "cv.pdf"]
+"cli.data" = ["*.yaml"]

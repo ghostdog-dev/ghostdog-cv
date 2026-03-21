@@ -1,0 +1,262 @@
+meta:
+  name: "Arthur Seguret"
+  alias: "GhostDog"
+  title: "Developpeur Concepteur Logiciel Fullstack"
+  subtitle: "Python · JavaScript · TypeScript"
+  age: 29
+  location: "Pays Basque, Pyrenees-Atlantiques — Remote"
+  bio: >
+    Developpeur fullstack oriente backend, diplome Developpeur Concepteur Logiciel
+    Python et JavaScript, avec deux ans d'experience en developpement Python.
+    Specialise dans l'automatisation de taches internes et le developpement de
+    microservices. Ancien commercial reconverti dans la tech, je transforme des
+    idees en solutions concretes grace au code. Rigoureux, curieux et en
+    apprentissage continu, chaque ligne de code est une opportunite de donner vie
+    a une idee et de resoudre des problematiques complexes.
+  contact:
+    email: "ghostdogthe1@gmail.com"
+    github: "https://github.com/Laseguue"
+    linkedin: "https://www.linkedin.com/in/arthur-seguret-052bb5288"
+
+skills:
+  languages:
+    - name: "Python"
+      level: "expert"
+      years: 2
+      details: "Langage de coeur, deux ans d'experience + un an de formation"
+    - name: "JavaScript"
+      level: "intermediaire"
+      details: "Diplome obtenu, projets freelance"
+    - name: "TypeScript"
+      level: "junior"
+      details: "Utilise en frontend avec React"
+
+  backend:
+    - name: "FastAPI"
+      level: "expert"
+    - name: "Django"
+      level: "avance"
+    - name: "Flask"
+      level: "avance"
+    - name: "Microservices"
+      level: "expert"
+      details: "Architecture, integration API, deploiement"
+    - name: "Automatisation"
+      level: "expert"
+      details: "Taches internes, branchements API, workflows"
+
+  frontend:
+    - name: "React"
+      level: "junior"
+    - name: "Vite.js"
+      level: "junior"
+    - name: "Vike"
+      level: "junior"
+    - name: "React Router"
+      level: "junior"
+    - name: "Redux"
+      level: "notions"
+
+  databases:
+    - name: "PostgreSQL"
+      level: "avance"
+    - name: "SQLite"
+      level: "avance"
+    - name: "Airtable"
+      level: "avance"
+      details: "Utilise comme backend no-code chez Everping"
+    - name: "Firebase"
+      level: "intermediaire"
+    - name: "Supabase"
+      level: "intermediaire"
+
+  infra:
+    - name: "Docker"
+      level: "avance"
+      details: "Conteneurisation et deploiement"
+    - name: "GCP"
+      level: "avance"
+      details: "Cloud Run, Cloud Functions, Compute Engine"
+    - name: "GitHub"
+      level: "avance"
+    - name: "Netlify"
+      level: "avance"
+    - name: "Heroku"
+      level: "intermediaire"
+    - name: "GitHub Pages"
+      level: "intermediaire"
+
+  ai:
+    - name: "Claude API (Anthropic)"
+      level: "avance"
+      details: "LLM de preference, agents IA conversationnels"
+    - name: "OpenAI API"
+      level: "intermediaire"
+    - name: "Agents IA"
+      level: "avance"
+      details: "Conception et deploiement d'agents specialises"
+
+  tools:
+    - name: "Redis"
+      details: "Cache"
+    - name: "Stripe"
+      details: "Integration paiement"
+    - name: "Fintecture"
+      details: "Integration paiement"
+    - name: "UPS / La Poste API"
+      details: "Integration logistique"
+    - name: "Git"
+    - name: "VS Code"
+    - name: "Claude Code"
+
+experience:
+  - title: "Developpeur Python — Microservices & Automatisation"
+    company: "Everping"
+    location: "Remote"
+    period: "2024 - 2026"
+    description: >
+      Conception et developpement de microservices adaptes a la stack de
+      l'entreprise (site et back-office no-code via Airtable, paiements Stripe
+      et Fintecture, livraisons UPS et La Poste). Branchement et integration
+      d'APIs tierces pour automatiser le pole operationnel et logistique interne.
+      Deploiement des services sur Google Cloud Platform (Cloud Run, Cloud
+      Functions). Objectif : rendre l'application autonome et eliminer les
+      interactions manuelles de gestion.
+    tags:
+      - python
+      - fastapi
+      - microservices
+      - automatisation
+      - gcp
+      - cloud-run
+      - airtable
+      - stripe
+      - api-integration
+
+  - title: "Developpeur Fullstack Freelance"
+    company: "Independant"
+    location: "Remote"
+    period: "2024 - present"
+    description: >
+      Creation de sites et applications fullstack pour divers clients :
+      sites vitrines, applications avec backend, agents IA. Du site statique
+      simple au projet complet avec API et intelligence artificielle.
+    tags:
+      - python
+      - react
+      - typescript
+      - fastapi
+      - django
+      - freelance
+      - agents-ia
+
+  - title: "Fondateur — E-commerce & Boutique physique"
+    company: "LUXE&CO Outlet"
+    location: "Bayonne"
+    period: "2020 - 2022"
+    description: >
+      Creation et gestion complete d'une entreprise de ventes privees.
+      Lancement d'un e-shop, gestion d'une boutique physique, relation client,
+      logistique, comptabilite. Entrepreneur solo de A a Z.
+    tags:
+      - entrepreneuriat
+      - e-commerce
+      - gestion
+      - vente
+
+  - title: "Technico-commercial — Eclairage & Decoration"
+    company: "LI-DESIGN"
+    location: "Anglet"
+    period: "2018 - 2020"
+    description: >
+      Vente et prescription en eclairage et decoration d'interieur B2B.
+      Conseil technique aux professionnels, suivi des projets, relation client.
+    tags:
+      - vente-b2b
+      - conseil-technique
+      - eclairage
+
+projects:
+  - name: "GhostDog CV"
+    stack: ["FastAPI", "React", "TypeScript", "Claude API", "Rich", "Typer"]
+    description: >
+      CV multi-rendu : API REST, CLI, site web, PDF, agent IA conversationnel.
+      Une seule source de donnees YAML alimente 5 rendus differents.
+    url: "https://github.com/Laseguue/ghostdog-cv"
+
+  - name: "Bibliotheque IA"
+    stack: ["React", "Python", "API"]
+    description: >
+      Annuaire repertoriant les IA existantes avec fiches descriptives,
+      formations integrees et suivi de contenu pedagogique.
+
+  - name: "Chat IA Multimodal"
+    stack: ["Python", "React", "Claude API", "OpenAI"]
+    description: >
+      Application de chat IA incluant generation d'images et toutes les
+      fonctionnalites de base des LLM dans une interface unifiee.
+
+  - name: "Agent IA Formations RNCP"
+    stack: ["Python", "Claude API", "FastAPI"]
+    description: >
+      Agent IA specialise qui analyse et guide les utilisateurs sur les
+      formations en rapport avec les fiches RNCP francaises.
+
+  - name: "Agent IA Reporting Financier"
+    stack: ["Python", "Claude API", "API integrations"]
+    description: >
+      Agent IA qui correle les donnees entre emails, systemes de paiement,
+      facturation et services de livraison pour generer des rapports
+      automatises sur les paiements, marges et flux financiers.
+
+  - name: "Site Vitrine Artiste"
+    stack: ["React", "Vite", "CSS"]
+    description: >
+      Site vitrine fullstack pour un artiste, design sur mesure et
+      deploiement statique.
+
+education:
+  - school: "OpenClassrooms"
+    degree: "Developpeur Concepteur Logiciel JavaScript React TypeScript"
+    level: "Bac+4"
+    year: "2024 - 2026"
+    description: "Formation diplomante en developpement frontend et fullstack JS/TS/React."
+
+  - school: "OpenClassrooms"
+    degree: "Developpeur Concepteur Logiciel Python"
+    level: "Bac+4 (Niveau VI)"
+    year: "2023 - 2024"
+    description: "Formation diplomante en conception logicielle et developpement Python."
+
+  - school: "Docstring.fr"
+    degree: "Formation complete Python"
+    year: "2023"
+    description: "Formation approfondie Python, de debutant a avance."
+
+  - school: "Udemy"
+    degree: "Formations Django & Python — Debutant a Expert"
+    year: "2023"
+    description: "Parcours complet Django et Python via Udemy."
+
+  - school: "Talis Business School"
+    degree: "BTS NDRC (Negociation et Digitalisation de la Relation Client)"
+    year: "2017 - 2020"
+    description: "Formation commerciale et relation client digitale."
+
+  - school: "Lycee Saint-Joseph, Ustaritz"
+    degree: "Bac Pro Vente"
+    level: "Mention Assez Bien"
+    year: "2012 - 2015"
+    description: "Baccalaureat professionnel vente."
+
+languages:
+  - name: "Francais"
+    level: "Natif"
+  - name: "Anglais"
+    level: "Technique (lecture documentation, code, echanges simples)"
+
+interests:
+  - "Intelligence artificielle & nouvelles technologies"
+  - "Jeux video & culture geek"
+  - "Sciences, physique & documentaires"
+  - "Nature, campagne & animaux"

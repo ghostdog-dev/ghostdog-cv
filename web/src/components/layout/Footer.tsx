@@ -17,7 +17,7 @@ function Footer() {
             GitHub
           </a>
           <a
-            href="https://linkedin.com/in/arthur-seguret"
+            href="https://www.linkedin.com/in/arthur-seguret-052bb5288/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn (nouvel onglet)"
