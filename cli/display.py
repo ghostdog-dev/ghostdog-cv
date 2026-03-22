@@ -14,14 +14,33 @@ def print_header(cv: dict) -> None:
     header.append(f"{meta['name']} · {meta.get('age', '')} ans\n", style="dim")
     header.append(f"{meta['title']}\n", style="bright_magenta")
     header.append(f"{meta.get('subtitle', '')}\n", style="dim magenta")
+    if meta.get("availability"):
+        header.append(f"\n● {meta['availability']}\n", style="bold green")
+    if meta.get("permis"):
+        header.append(f"{meta['permis']}\n", style="dim")
     header.append(f"\n{meta['contact']['email']}", style="cyan")
     header.append(f" · {meta['contact']['github']}", style="cyan")
     console.print(Panel(header, border_style="bright_magenta", padding=(1, 2)))
 
 
+def print_soft_skills(cv: dict) -> None:
+    soft_skills = cv.get("soft_skills", [])
+    if not soft_skills:
+        return
+    console.print("\n[bold bright_magenta]# Savoir-etre[/]\n")
+    table = Table(box=box.ROUNDED, border_style="bright_black")
+    table.add_column("Qualite", style="bright_white")
+    table.add_column("Description", style="dim")
+    for s in soft_skills:
+        table.add_row(s["name"], s.get("description", ""))
+    console.print(table)
+
+
 def print_skills(cv: dict) -> None:
     skills = cv["skills"]
     for category, items in skills.items():
+        if not items:
+            continue
         table = Table(
             title=category.upper(),
             box=box.ROUNDED,
@@ -50,7 +69,15 @@ def print_experience(cv: dict) -> None:
         panel_content = Text()
         panel_content.append(f"{exp['company']}", style="bright_magenta")
         panel_content.append(f" · {exp.get('location', '')}\n", style="dim")
+        if exp.get("context"):
+            panel_content.append(f"{exp['context']}\n", style="italic dim")
         panel_content.append(f"{exp['description'].strip()}\n", style="")
+        highlights = exp.get("highlights", [])
+        if highlights:
+            panel_content.append("\n")
+            for h in highlights:
+                panel_content.append(f"  > ", style="bold bright_magenta")
+                panel_content.append(f"{h.strip()}\n", style="")
         panel_content.append(f"\n{tags}", style="dim magenta")
         console.print(Panel(
             panel_content,
@@ -87,13 +114,15 @@ def print_education(cv: dict) -> None:
     table.add_column("Annee", style="dim")
     for e in cv["education"]:
         level = f" ({e['level']})" if e.get("level") else ""
-        table.add_row(f"{e['degree']}{level}", e["school"], e["year"])
+        rncp = f" — RNCP {e['rncp']}" if e.get("rncp") else ""
+        table.add_row(f"{e['degree']}{level}{rncp}", e["school"], e["year"])
     console.print(table)
 
 
 def print_full_cv(cv: dict) -> None:
     print_header(cv)
     console.print()
+    print_soft_skills(cv)
     print_skills(cv)
     print_experience(cv)
     print_projects(cv)

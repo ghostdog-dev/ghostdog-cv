@@ -54,6 +54,16 @@ def get_skills():
 
 
 @app.get(
+    "/cv/soft_skills",
+    summary="Savoir-etre",
+    description="Retourne les soft skills.",
+    tags=["CV"],
+)
+def get_soft_skills():
+    return load_cv().get("soft_skills", [])
+
+
+@app.get(
     "/cv/experience",
     summary="Experiences professionnelles",
     description="Retourne la liste des experiences.",
