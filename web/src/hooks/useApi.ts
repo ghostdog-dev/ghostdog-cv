@@ -30,8 +30,22 @@ export function useApi<T>(fetcher: () => Promise<T>) {
   }, []);
 
   useEffect(() => {
-    load();
-  }, [load]);
+    let cancelled = false;
+    setState({ data: null, loading: true, error: null });
+    fetcherRef.current()
+      .then((data) => {
+        if (!cancelled) setState({ data, loading: false, error: null });
+      })
+      .catch((err) => {
+        if (!cancelled)
+          setState((prev) => ({
+            data: prev.data,
+            loading: false,
+            error: err.message || "Erreur de chargement",
+          }));
+      });
+    return () => { cancelled = true; };
+  }, []);
 
   return { ...state, reload: load };
 }

@@ -63,6 +63,11 @@ function CvView() {
           </div>
         </section>
 
+        {/* ── Bio ── */}
+        {cv.meta.bio && (
+          <p className="cv-bio">{cv.meta.bio}</p>
+        )}
+
         {/* ── Soft Skills ── */}
         {cv.soft_skills && cv.soft_skills.length > 0 && (
           <section className="cv-section">

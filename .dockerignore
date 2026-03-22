@@ -8,8 +8,10 @@ docs/
 .claude/
 node_modules/
 __pycache__/
+*.pyc
 *.egg-info/
 setup.py
 setup.cfg
 MANIFEST.in
 pyproject.toml
+.env

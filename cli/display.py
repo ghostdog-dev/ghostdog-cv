@@ -1,3 +1,7 @@
+from __future__ import annotations
+
+from typing import Any
+
 from rich.console import Console
 from rich.panel import Panel
 from rich.table import Table
@@ -7,7 +11,7 @@ from rich import box
 console = Console()
 
 
-def print_header(cv: dict) -> None:
+def print_header(cv: dict[str, Any]) -> None:
     meta = cv["meta"]
     header = Text()
     header.append(f">_ {meta['alias']}\n", style="bold bright_white")
@@ -16,14 +20,20 @@ def print_header(cv: dict) -> None:
     header.append(f"{meta.get('subtitle', '')}\n", style="dim magenta")
     if meta.get("availability"):
         header.append(f"\n● {meta['availability']}\n", style="bold green")
+    if meta.get("location"):
+        header.append(f"{meta['location']}\n", style="dim")
     if meta.get("permis"):
         header.append(f"{meta['permis']}\n", style="dim")
     header.append(f"\n{meta['contact']['email']}", style="cyan")
     header.append(f" · {meta['contact']['github']}", style="cyan")
+    if meta["contact"].get("linkedin"):
+        header.append(f" · {meta['contact']['linkedin']}", style="cyan")
     console.print(Panel(header, border_style="bright_magenta", padding=(1, 2)))
+    if meta.get("bio"):
+        console.print(f"\n[dim]{meta['bio'].strip()}[/]\n")
 
 
-def print_soft_skills(cv: dict) -> None:
+def print_soft_skills(cv: dict[str, Any]) -> None:
     soft_skills = cv.get("soft_skills", [])
     if not soft_skills:
         return
@@ -36,7 +46,7 @@ def print_soft_skills(cv: dict) -> None:
     console.print(table)
 
 
-def print_skills(cv: dict) -> None:
+def print_skills(cv: dict[str, Any]) -> None:
     skills = cv["skills"]
     for category, items in skills.items():
         if not items:
@@ -62,7 +72,7 @@ def print_skills(cv: dict) -> None:
         console.print()
 
 
-def print_experience(cv: dict) -> None:
+def print_experience(cv: dict[str, Any]) -> None:
     console.print("\n[bold bright_magenta]# Experience[/]\n")
     for exp in cv["experience"]:
         tags = ", ".join(exp.get("tags", []))
@@ -88,7 +98,7 @@ def print_experience(cv: dict) -> None:
         ))
 
 
-def print_projects(cv: dict) -> None:
+def print_projects(cv: dict[str, Any]) -> None:
     console.print("\n[bold bright_magenta]# Projets[/]\n")
     for p in cv["projects"]:
         stack = " · ".join(p.get("stack", []))
@@ -106,7 +116,7 @@ def print_projects(cv: dict) -> None:
         ))
 
 
-def print_education(cv: dict) -> None:
+def print_education(cv: dict[str, Any]) -> None:
     console.print("\n[bold bright_magenta]# Formation[/]\n")
     for e in cv["education"]:
         panel_content = Text()
@@ -128,7 +138,7 @@ def print_education(cv: dict) -> None:
         ))
 
 
-def print_full_cv(cv: dict) -> None:
+def print_full_cv(cv: dict[str, Any]) -> None:
     print_header(cv)
     console.print()
     print_soft_skills(cv)
@@ -136,6 +146,9 @@ def print_full_cv(cv: dict) -> None:
     print_experience(cv)
     print_projects(cv)
     print_education(cv)
-    langs = " · ".join(f"{l['name']} ({l['level']})" for l in cv.get("languages", []))
+    langs = " · ".join(f"{lang['name']} ({lang['level']})" for lang in cv.get("languages", []))
     if langs:
         console.print(f"\n[bold bright_magenta]# Langues[/]\n{langs}\n")
+    interests = cv.get("interests", [])
+    if interests:
+        console.print(f"[bold bright_magenta]# Centres d'interet[/]\n{' · '.join(interests)}\n")

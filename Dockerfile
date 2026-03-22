@@ -6,7 +6,10 @@ COPY api/ api/
 COPY data/cv.yaml data/cv.yaml
 COPY data/cv.pdf data/cv.pdf
 
-RUN pip install --no-cache-dir fastapi uvicorn[standard] pyyaml
+RUN pip install --no-cache-dir fastapi uvicorn[standard] pyyaml anthropic
+
+RUN useradd --create-home appuser
+USER appuser
 
 EXPOSE 8080
 

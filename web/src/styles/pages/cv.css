@@ -10,6 +10,15 @@
   padding-bottom: var(--space-2xl);
 }
 
+/* ── Bio ── */
+.cv-bio {
+  font-size: var(--text-sm);
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+  line-height: var(--leading-normal);
+  max-width: 700px;
+}
+
 /* ── Hero ── */
 .cv-hero {
   display: flex;

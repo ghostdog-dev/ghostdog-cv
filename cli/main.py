@@ -61,7 +61,7 @@ def chat() -> None:
     console.print("[bold bright_magenta]>_ GhostDog Agent[/]")
     console.print("[dim]Tapez 'quit' pour quitter.\n[/]")
 
-    history: list = []
+    history: list[dict[str, str]] = []
     while True:
         try:
             msg = console.input("[bold cyan]vous > [/]")
@@ -83,8 +83,14 @@ def chat() -> None:
             answer = res.json()["response"]
             history.append({"role": "assistant", "content": answer})
             console.print(f"[bright_magenta]>_ ghostdog >[/] {answer}\n")
-        except Exception:
+        except requests.ConnectionError:
+            console.print("[red]Impossible de joindre l'agent (connexion refusee).[/]\n")
+        except requests.Timeout:
+            console.print("[red]L'agent met trop de temps a repondre.[/]\n")
+        except requests.RequestException:
             console.print("[red]Agent temporairement indisponible.[/]\n")
+        except Exception:
+            console.print("[red]Erreur inattendue.[/]\n")
 
 
 if __name__ == "__main__":
