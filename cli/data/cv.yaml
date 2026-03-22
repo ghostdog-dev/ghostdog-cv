@@ -1,20 +1,20 @@
 meta:
   name: "Arthur Seguret"
   alias: "GhostDog"
-  title: "Developpeur Concepteur Logiciel Fullstack"
+  title: "Développeur Concepteur Logiciel Fullstack"
   subtitle: "Python · React · TypeScript"
   age: 29
-  location: "Pays Basque, Pyrenees-Atlantiques — Remote"
-  availability: "Disponible immediatement — CDI, CDD, Freelance, Missions"
+  location: "Pays Basque, Pyrénées-Atlantiques — Remote"
+  availability: "Disponible immédiatement — CDI, CDD, Freelance, Missions"
   permis: "Permis B"
   bio: >
-    Developpeur fullstack oriente backend Python, diplome Developpeur Concepteur
+    Développeur fullstack orienté backend Python, diplômé Développeur Concepteur
     Logiciel (deux titres Bac+4 : backend Python et frontend React). Deux ans
-    d'experience en developpement Python, specialise dans l'automatisation de
-    processus metier et le developpement de microservices. Ancien commercial
-    reconverti dans la tech, je transforme des idees en solutions concretes grace
+    d'expérience en développement Python, spécialisé dans l'automatisation de
+    processus métier et le développement de microservices. Ancien commercial
+    reconverti dans la tech, je transforme des idées en solutions concrètes grâce
     au code. Rigoureux, curieux et en apprentissage continu, chaque ligne de code
-    est une opportunite de donner vie a une idee et de resoudre des problematiques
+    est une opportunité de donner vie à une idée et de résoudre des problématiques
     complexes.
   contact:
     email: "ghostdogthe1@gmail.com"
@@ -26,40 +26,40 @@ skills:
     - name: "Python"
       level: "expert"
       years: 2
-      details: "Langage de coeur, deux ans d'experience + un an de formation"
+      details: "Langage de cœur, deux ans d'expérience + un an de formation"
     - name: "JavaScript"
-      level: "intermediaire"
-      details: "Diplome obtenu, projets freelance"
+      level: "intermédiaire"
+      details: "Diplôme obtenu, projets freelance"
     - name: "TypeScript"
       level: "junior"
-      details: "Utilise en frontend avec React"
+      details: "Utilisé en frontend avec React"
     - name: "HTML / CSS"
-      level: "intermediaire"
-      details: "Integration et mise en page"
+      level: "intermédiaire"
+      details: "Intégration et mise en page"
 
   backend:
     - name: "FastAPI"
       level: "expert"
     - name: "Django"
-      level: "avance"
+      level: "avancé"
     - name: "Flask"
-      level: "avance"
+      level: "avancé"
     - name: "Django ORM"
-      level: "avance"
-      details: "ORM de coeur, ouvert a tout"
+      level: "avancé"
+      details: "ORM de cœur, ouvert à tout"
     - name: "Microservices"
       level: "expert"
-      details: "Architecture, integration API, deploiement"
+      details: "Architecture, intégration API, déploiement"
     - name: "Automatisation"
       level: "expert"
       details: "Workflows complets, scraping, scheduling"
     - name: "REST API"
       level: "expert"
     - name: "Celery"
-      level: "intermediaire"
-      details: "Taches asynchrones"
+      level: "intermédiaire"
+      details: "Tâches asynchrones"
     - name: "WebSocket"
-      level: "intermediaire"
+      level: "intermédiaire"
 
   frontend:
     - name: "React"
@@ -75,56 +75,56 @@ skills:
 
   databases:
     - name: "PostgreSQL"
-      level: "avance"
+      level: "avancé"
     - name: "SQLite"
-      level: "avance"
+      level: "avancé"
     - name: "Airtable"
-      level: "avance"
-      details: "Utilise comme backend no-code chez Everping"
+      level: "avancé"
+      details: "Utilisé comme backend no-code chez Everping"
     - name: "Firebase"
-      level: "intermediaire"
+      level: "intermédiaire"
     - name: "Supabase"
-      level: "intermediaire"
+      level: "intermédiaire"
 
   infra:
     - name: "Docker"
-      level: "avance"
-      details: "Conteneurisation et deploiement"
+      level: "avancé"
+      details: "Conteneurisation et déploiement"
     - name: "GCP"
-      level: "avance"
+      level: "avancé"
       details: "Cloud Run, Cloud Functions, Compute Engine"
     - name: "GitHub"
-      level: "avance"
+      level: "avancé"
     - name: "CI/CD"
-      level: "intermediaire"
+      level: "intermédiaire"
       details: "GitHub Actions"
     - name: "Linux / Bash / WSL"
-      level: "avance"
+      level: "avancé"
       details: "Environnement de travail quotidien"
     - name: "Netlify"
-      level: "avance"
+      level: "avancé"
     - name: "Heroku"
-      level: "intermediaire"
+      level: "intermédiaire"
 
   ai:
     - name: "Claude API (Anthropic)"
-      level: "avance"
-      details: "LLM de preference, agents IA conversationnels"
+      level: "avancé"
+      details: "LLM de préférence, agents IA conversationnels"
     - name: "OpenAI API"
-      level: "intermediaire"
+      level: "intermédiaire"
     - name: "Agents IA"
-      level: "avance"
-      details: "Conception et deploiement d'agents specialises"
+      level: "avancé"
+      details: "Conception et déploiement d'agents spécialisés"
 
   tools:
     - name: "Redis"
       details: "Cache"
     - name: "Stripe"
-      details: "Integration paiement"
+      details: "Intégration paiement"
     - name: "Fintecture"
-      details: "Integration paiement"
+      details: "Intégration paiement"
     - name: "UPS / La Poste API"
-      details: "Integration logistique"
+      details: "Intégration logistique"
     - name: "Evoliz"
       details: "Facturation"
     - name: "HubSpot"
@@ -141,54 +141,54 @@ skills:
 
 soft_skills:
   - name: "Autonomie"
-    description: "Travaille en solo sur tous les projets, de la conception au deploiement"
+    description: "Travaille en solo sur tous les projets, de la conception au déploiement"
   - name: "Esprit entrepreneurial"
-    description: "A cree et gere sa propre entreprise de A a Z"
-  - name: "Resolution de problemes"
+    description: "A créé et géré sa propre entreprise de A à Z"
+  - name: "Résolution de problèmes"
     description: "Automatisation de flux complets partant de processus 100% manuels"
-  - name: "Adaptabilite"
-    description: "Reconversion reussie du commerce vers le developpement"
+  - name: "Adaptabilité"
+    description: "Reconversion réussie du commerce vers le développement"
   - name: "Polyvalence"
-    description: "Backend, frontend, infra, business — capable de tout gerer"
+    description: "Backend, frontend, infra, business — capable de tout gérer"
   - name: "Rigueur"
-    description: "Architecture modulaire, code structure et maintenable"
-  - name: "Curiosite technique"
+    description: "Architecture modulaire, code structuré et maintenable"
+  - name: "Curiosité technique"
     description: "Veille permanente, apprentissage continu, exploration de nouvelles stacks"
   - name: "Vision end-to-end"
-    description: "Pense et implemente les flux dans leur globalite, du besoin a la production"
+    description: "Pense et implémente les flux dans leur globalité, du besoin à la production"
 
 experience:
-  - title: "Developpeur Python — Microservices & Automatisation"
+  - title: "Développeur Python — Microservices & Automatisation"
     company: "Everping"
     location: "Remote"
     period: "2024 - 2026"
     context: "Dev solo — 25 personnes dans l'entreprise, 1 personne nocode en support"
     description: >
-      Conception et developpement de 8 microservices et de multiples scripts
+      Conception et développement de 8 microservices et de multiples scripts
       d'automatisation pour transformer un flux logistique 100% manuel en
-      processus entierement automatise.
+      processus entièrement automatisé.
     highlights:
       - >
-        Automatisation de la mise a jour du catalogue produit : avant, la mise a
+        Automatisation de la mise à jour du catalogue produit : avant, la mise à
         jour se faisait manuellement sur Google Sheets en consultant chaque site
-        fournisseur un par un (copier-coller ou telechargement de fichiers Excel),
+        fournisseur un par un (copier-coller ou téléchargement de fichiers Excel),
         ~1,5 jour de travail. Script de scraping (API quand disponible, sinon
-        telechargement de fichiers ou scraping pur), rassemblement, tri et insertion
-        automatique en base de donnees sur scheduler journalier. Temps d'execution :
+        téléchargement de fichiers ou scraping pur), rassemblement, tri et insertion
+        automatique en base de données sur scheduler journalier. Temps d'exécution :
         10 minutes.
       - >
-        Automatisation du traitement des commandes : notifications en temps reel
-        a la reception, generation automatique de facture pro forma avec lien de
+        Automatisation du traitement des commandes : notifications en temps réel
+        à la réception, génération automatique de facture pro forma avec lien de
         paiement (CB via Stripe, virement via Fintecture selon le choix client),
-        envoi automatique par email. Avant : tout etait fait manuellement sur
+        envoi automatique par email. Avant : tout était fait manuellement sur
         chaque service.
       - >
-        Automatisation de la logistique : creation automatique des etiquettes
+        Automatisation de la logistique : création automatique des étiquettes
         d'envoi UPS, suivi du flux complet avec notifications et logs dans Slack,
-        generation automatique de la facture definitive au pickup UPS.
+        génération automatique de la facture définitive au pickup UPS.
       - >
-        Scripts internes : transfert de donnees entre HubSpot et Lemlist (pas
-        possible nativement), recuperation automatique de factures fournisseurs et
+        Scripts internes : transfert de données entre HubSpot et Lemlist (pas
+        possible nativement), récupération automatique de factures fournisseurs et
         clients, calcul de marges.
     tags:
       - python
@@ -204,30 +204,30 @@ experience:
       - scraping
       - slack
 
-  - title: "Developpeur Fullstack Freelance"
-    company: "Independant"
+  - title: "Développeur Fullstack Freelance"
+    company: "Indépendant"
     location: "Remote"
     period: "2024 - present"
-    context: "Freelance solo — en parallele d'Everping puis a plein temps"
+    context: "Freelance solo — en parallèle d'Everping puis à plein temps"
     description: >
-      Developpement d'applications web completes pour 3 clients ainsi que des
+      Développement d'applications web complètes pour 3 clients ainsi que des
       projets personnels, du site vitrine au SaaS complet avec IA.
     highlights:
       - >
         Site vitrine pour un artiste peintre : React, Vite, React Router —
-        multi-page avec blog, galerie, landing page, pages detaillees par oeuvre.
-        Livre et en ligne.
+        multi-page avec blog, galerie, landing page, pages détaillées par œuvre.
+        Livré et en ligne.
       - >
         Application de chat IA : backend Django, frontend React — chat avec
-        support d'images et de fichiers. Livre et en ligne.
+        support d'images et de fichiers. Livré et en ligne.
       - >
-        Application complete IA Finder : backend Django, frontend React — moteur
-        de recherche IA complet. Livre et en ligne.
+        Application complète IA Finder : backend Django, frontend React — moteur
+        de recherche IA complet. Livré et en ligne.
       - >
-        Projet personnel : application de correlation factures/paiements via IA
-        (demo visuelle prete, lancement imminent).
+        Projet personnel : application de corrélation factures/paiements via IA
+        (démo visuelle prête, lancement imminent).
       - >
-        Projet personnel : application de creation de formations basees sur les
+        Projet personnel : application de création de formations basées sur les
         fiches RNCP existantes.
     tags:
       - python
@@ -244,11 +244,11 @@ experience:
     location: "Bayonne"
     period: "2020 - 2022"
     description: >
-      Creation et gestion complete d'une entreprise en solo. Realisation des
-      travaux d'amenagement de la boutique, lancement en ventes privees sur
-      internet avant l'ouverture physique. Gestion integrale : achat, vente,
-      logistique, comptabilite, marketing, site internet, relation client.
-      Entrepreneur solo de A a Z.
+      Création et gestion complète d'une entreprise en solo. Réalisation des
+      travaux d'aménagement de la boutique, lancement en ventes privées sur
+      internet avant l'ouverture physique. Gestion intégrale : achat, vente,
+      logistique, comptabilité, marketing, site internet, relation client.
+      Entrepreneur solo de A à Z.
     tags:
       - entrepreneuriat
       - e-commerce
@@ -257,13 +257,13 @@ experience:
       - marketing
       - site-internet
 
-  - title: "Technico-commercial — Eclairage & Decoration"
+  - title: "Technico-commercial — Éclairage & Décoration"
     company: "LI-DESIGN"
     location: "Anglet"
     period: "2018 - 2020"
-    context: "Equipe de 4 personnes"
+    context: "Équipe de 4 personnes"
     description: >
-      Vente et prescription en eclairage et decoration d'interieur B2B.
+      Vente et prescription en éclairage et décoration d'intérieur B2B.
       Conseil technique aux professionnels, suivi des projets, relation client.
     tags:
       - vente-b2b
@@ -275,92 +275,92 @@ projects:
     stack: ["FastAPI", "React", "TypeScript", "Claude API", "Rich", "Typer"]
     description: >
       CV multi-rendu : API REST, CLI, site web, PDF, agent IA conversationnel.
-      Une seule source de donnees YAML alimente 5 rendus differents.
+      Une seule source de données YAML alimente 5 rendus différents.
     url: "https://github.com/Laseguue/ghostdog-cv"
 
   - name: "Agent IA Reporting Financier"
     stack: ["Python", "Claude API", "API integrations"]
     description: >
-      Agent IA qui correle les donnees entre emails, systemes de paiement,
-      facturation et services de livraison pour generer des rapports
-      automatises sur les paiements, marges et flux financiers.
-      Demo visuelle disponible, lancement imminent.
+      Agent IA qui corrèle les données entre emails, systèmes de paiement,
+      facturation et services de livraison pour générer des rapports
+      automatisés sur les paiements, marges et flux financiers.
+      Démo visuelle disponible, lancement imminent.
 
   - name: "Agent IA Formations RNCP"
     stack: ["Python", "Claude API", "FastAPI"]
     description: >
-      Agent IA specialise qui analyse et guide les utilisateurs sur les
-      formations en rapport avec les fiches RNCP francaises.
+      Agent IA spécialisé qui analyse et guide les utilisateurs sur les
+      formations en rapport avec les fiches RNCP françaises.
 
   - name: "Site Vitrine Artiste"
     stack: ["React", "Vite", "React Router", "CSS"]
     description: >
       Site vitrine multi-page pour un artiste peintre : galerie, blog,
-      landing page, pages detaillees par oeuvre. Design sur mesure.
+      landing page, pages détaillées par œuvre. Design sur mesure.
     url: "https://lassegueart.com"
 
   - name: "Chat IA Multimodal"
     stack: ["Django", "React", "Claude API", "OpenAI"]
     description: >
       Application de chat IA avec support d'images, fichiers et toutes les
-      fonctionnalites de base des LLM dans une interface unifiee.
+      fonctionnalités de base des LLM dans une interface unifiée.
     url: "https://chatalienai.com"
 
   - name: "IA Finder"
     stack: ["Django", "React", "TypeScript"]
     description: >
-      Application complete de recherche alimentee par IA. Backend Django,
-      frontend React. Livree et en production.
+      Application complète de recherche alimentée par IA. Backend Django,
+      frontend React. Livrée et en production.
     url: "https://chatgpt.fr"
 
 education:
   - school: "OpenClassrooms"
-    degree: "Developpeur Concepteur Logiciel — JavaScript React TypeScript"
+    degree: "Développeur Concepteur Logiciel — JavaScript React TypeScript"
     level: "Bac+4"
     rncp: "38038"
     year: "2024 - 2026"
     us_equivalent: "Applied Bachelor of Technology — Computer Software Development"
     diploma_image: "/diplomas/diploma-js-react.pdf"
     us_diploma_image: "/diplomas/diploma-bachelor-us.pdf"
-    description: "Formation diplomante axee frontend et fullstack JS/TS/React (Option 1 — Front-end). Equivalence US : Applied Bachelor of Technology."
+    description: "Formation diplômante axée frontend et fullstack JS/TS/React (Option 1 — Front-end). Équivalence US : Applied Bachelor of Technology."
 
   - school: "OpenClassrooms"
-    degree: "Developpeur Concepteur Logiciel — Python"
+    degree: "Développeur Concepteur Logiciel — Python"
     level: "Bac+4"
     rncp: "38038"
     year: "2023 - 2024"
     diploma_image: "/diplomas/diploma-python.pdf"
-    description: "Formation diplomante axee backend et conception logicielle Python (Option 2 — Back-end)."
+    description: "Formation diplômante axée backend et conception logicielle Python (Option 2 — Back-end)."
 
   - school: "Docstring.fr"
-    degree: "Formation complete Python"
+    degree: "Formation complète Python"
     year: "2023"
-    description: "Formation approfondie Python, de debutant a avance."
+    description: "Formation approfondie Python, de débutant à avancé."
 
   - school: "Udemy"
-    degree: "Formations Django & Python — Debutant a Expert"
+    degree: "Formations Django & Python — Débutant à Expert"
     year: "2023"
     description: "Parcours complet Django et Python via Udemy."
 
   - school: "Talis Business School"
-    degree: "BTS NDRC (Negociation et Digitalisation de la Relation Client)"
+    degree: "BTS NDRC (Négociation et Digitalisation de la Relation Client)"
     year: "2017 - 2020"
     description: "Formation commerciale et relation client digitale."
 
-  - school: "Lycee Saint-Joseph, Ustaritz"
+  - school: "Lycée Saint-Joseph, Ustaritz"
     degree: "Bac Pro Vente"
     level: "Mention Assez Bien"
     year: "2012 - 2015"
-    description: "Baccalaureat professionnel vente."
+    description: "Baccalauréat professionnel vente."
 
 languages:
-  - name: "Francais"
+  - name: "Français"
     level: "Natif"
   - name: "Anglais"
-    level: "Technique (lecture documentation, code, echanges simples)"
+    level: "Technique (lecture documentation, code, échanges simples)"
 
 interests:
   - "Intelligence artificielle & nouvelles technologies"
-  - "Jeux video & culture geek"
+  - "Jeux vidéo & culture geek"
   - "Sciences, physique & documentaires"
   - "Nature, campagne & animaux"
