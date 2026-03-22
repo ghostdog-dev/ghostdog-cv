@@ -320,8 +320,8 @@ education:
     rncp: "38038"
     year: "2024 - 2026"
     us_equivalent: "Applied Bachelor of Technology — Computer Software Development"
-    diploma_image: "/diplomas/diploma-js-react.jpg"
-    us_diploma_image: "/diplomas/diploma-bachelor-us.jpg"
+    diploma_image: "/diplomas/diploma-js-react.png"
+    us_diploma_image: "/diplomas/diploma-bachelor-us.png"
     description: "Formation diplomante axee frontend et fullstack JS/TS/React (Option 1 — Front-end). Equivalence US : Applied Bachelor of Technology."
 
   - school: "OpenClassrooms"
@@ -329,7 +329,7 @@ education:
     level: "Bac+4"
     rncp: "38038"
     year: "2023 - 2024"
-    diploma_image: "/diplomas/diploma-python.jpg"
+    diploma_image: "/diplomas/diploma-python.png"
     description: "Formation diplomante axee backend et conception logicielle Python (Option 2 — Back-end)."
 
   - school: "Docstring.fr"
