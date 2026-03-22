@@ -1,6 +1,7 @@
 export interface CvData {
   meta: Meta;
   skills: Skills;
+  soft_skills: SoftSkill[];
   experience: Experience[];
   projects: Project[];
   education: Education[];
@@ -15,6 +16,8 @@ export interface Meta {
   subtitle: string;
   age: number;
   location: string;
+  availability: string;
+  permis: string;
   bio: string;
   contact: {
     email: string;
@@ -31,6 +34,7 @@ export interface Skills {
   infra: Skill[];
   ai: Skill[];
   tools: Skill[];
+  legacy_tech: Skill[];
 }
 
 export interface Skill {
@@ -40,12 +44,19 @@ export interface Skill {
   details?: string;
 }
 
+export interface SoftSkill {
+  name: string;
+  description: string;
+}
+
 export interface Experience {
   title: string;
   company: string;
   location: string;
   period: string;
+  context?: string;
   description: string;
+  highlights?: string[];
   tags: string[];
 }
 
@@ -60,6 +71,7 @@ export interface Education {
   school: string;
   degree: string;
   level?: string;
+  rncp?: string;
   year: string;
   description: string;
 }

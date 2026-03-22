@@ -17,6 +17,9 @@ function EducationCard({ education }: EducationCardProps) {
         {education.level && (
           <span className="cv-card__badge">{education.level}</span>
         )}
+        {education.rncp && (
+          <span className="cv-card__badge">RNCP {education.rncp}</span>
+        )}
       </div>
       <p className="cv-card__desc">{education.description}</p>
     </div>
