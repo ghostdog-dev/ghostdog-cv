@@ -9,7 +9,7 @@ function Footer() {
         </p>
         <div className="footer__links">
           <a
-            href="https://github.com/Laseguue"
+            href="https://github.com/ghostdog-dev"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub (nouvel onglet)"

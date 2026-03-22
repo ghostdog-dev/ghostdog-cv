@@ -15,7 +15,7 @@ CV multi-rendu de **GhostDog** (Arthur Seguret) — une seule source de donnees,
 ## CLI — Installation
 
 ```bash
-pip install git+https://github.com/Laseguue/ghostdog-cv.git
+pip install git+https://github.com/ghostdog-dev/ghostdog-cv.git
 ```
 
 ### Commandes
@@ -70,6 +70,6 @@ cd web && npm install && npm run dev
 ## Auteur
 
 **Arthur Seguret** aka **GhostDog**
-- GitHub : [Laseguue](https://github.com/Laseguue)
+- GitHub : [ghostdog-dev](https://github.com/ghostdog-dev)
 - LinkedIn : [arthur-seguret](https://www.linkedin.com/in/arthur-seguret-052bb5288)
 - Email : ghostdogthe1@gmail.com

@@ -18,7 +18,7 @@ meta:
     complexes.
   contact:
     email: "ghostdogthe1@gmail.com"
-    github: "https://github.com/Laseguue"
+    github: "https://github.com/ghostdog-dev"
     linkedin: "https://www.linkedin.com/in/arthur-seguret-052bb5288"
 
 skills:
@@ -276,7 +276,7 @@ projects:
     description: >
       CV multi-rendu : API REST, CLI, site web, PDF, agent IA conversationnel.
       Une seule source de données YAML alimente 5 rendus différents.
-    url: "https://github.com/Laseguue/ghostdog-cv"
+    url: "https://github.com/ghostdog-dev/ghostdog-cv"
 
   - name: "Agent IA Reporting Financier"
     stack: ["Python", "Claude API", "API integrations"]

@@ -1,7 +1,7 @@
 import PageLayout from "../components/layout/PageLayout";
 import "../styles/pages/clidoc.css";
 
-const REPO_URL = "https://github.com/Laseguue/ghostdog-cv";
+const REPO_URL = "https://github.com/ghostdog-dev/ghostdog-cv";
 
 function CliDoc() {
   return (
