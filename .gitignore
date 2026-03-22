@@ -36,6 +36,9 @@ nohup.out
 # Screenshots
 *.png
 
+# Local tools
+tools/
+
 # Claude settings
 .claude/
 
