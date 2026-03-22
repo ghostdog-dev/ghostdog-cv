@@ -297,18 +297,21 @@ projects:
     description: >
       Site vitrine multi-page pour un artiste peintre : galerie, blog,
       landing page, pages detaillees par oeuvre. Design sur mesure.
+    url: "https://lassegueart.com"
 
   - name: "Chat IA Multimodal"
     stack: ["Django", "React", "Claude API", "OpenAI"]
     description: >
       Application de chat IA avec support d'images, fichiers et toutes les
       fonctionnalites de base des LLM dans une interface unifiee.
+    url: "https://chatalienai.com"
 
   - name: "IA Finder"
     stack: ["Django", "React", "TypeScript"]
     description: >
       Application complete de recherche alimentee par IA. Backend Django,
       frontend React. Livree et en production.
+    url: "https://chatgpt.fr"
 
 education:
   - school: "OpenClassrooms"
@@ -316,13 +319,17 @@ education:
     level: "Bac+4"
     rncp: "38038"
     year: "2024 - 2026"
-    description: "Formation diplomante axee frontend et fullstack JS/TS/React (Option 1 — Front-end)."
+    us_equivalent: "Applied Bachelor of Technology — Computer Software Development"
+    diploma_image: "/diplomas/diploma-js-react.jpg"
+    us_diploma_image: "/diplomas/diploma-bachelor-us.jpg"
+    description: "Formation diplomante axee frontend et fullstack JS/TS/React (Option 1 — Front-end). Equivalence US : Applied Bachelor of Technology."
 
   - school: "OpenClassrooms"
     degree: "Developpeur Concepteur Logiciel — Python"
     level: "Bac+4"
     rncp: "38038"
     year: "2023 - 2024"
+    diploma_image: "/diplomas/diploma-python.jpg"
     description: "Formation diplomante axee backend et conception logicielle Python (Option 2 — Back-end)."
 
   - school: "Docstring.fr"
