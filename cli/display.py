@@ -108,15 +108,24 @@ def print_projects(cv: dict) -> None:
 
 def print_education(cv: dict) -> None:
     console.print("\n[bold bright_magenta]# Formation[/]\n")
-    table = Table(box=box.ROUNDED, border_style="bright_black")
-    table.add_column("Diplome", style="bright_white")
-    table.add_column("Ecole", style="magenta")
-    table.add_column("Annee", style="dim")
     for e in cv["education"]:
-        level = f" ({e['level']})" if e.get("level") else ""
-        rncp = f" — RNCP {e['rncp']}" if e.get("rncp") else ""
-        table.add_row(f"{e['degree']}{level}{rncp}", e["school"], e["year"])
-    console.print(table)
+        panel_content = Text()
+        panel_content.append(f"{e['school']}", style="bright_magenta")
+        panel_content.append(f" · {e['year']}\n", style="dim")
+        if e.get("level"):
+            panel_content.append(f"{e['level']}", style="bold cyan")
+            if e.get("rncp"):
+                panel_content.append(f" — RNCP {e['rncp']}", style="cyan")
+            panel_content.append("\n")
+        if e.get("us_equivalent"):
+            panel_content.append(f"US: {e['us_equivalent']}\n", style="bold bright_green")
+        panel_content.append(f"{e.get('description', '')}", style="dim")
+        console.print(Panel(
+            panel_content,
+            title=f"[bold bright_white]{e['degree']}[/]",
+            border_style="bright_black",
+            padding=(1, 2),
+        ))
 
 
 def print_full_cv(cv: dict) -> None:

@@ -73,6 +73,9 @@ export interface Education {
   level?: string;
   rncp?: string;
   year: string;
+  us_equivalent?: string;
+  diploma_image?: string;
+  us_diploma_image?: string;
   description: string;
 }
 
