@@ -45,7 +45,16 @@ function CvView() {
             <div className="cv-hero__badges">
               <span className="cv-hero__badge">{cv.meta.location}</span>
               <span className="cv-hero__badge">{cv.meta.age} ans</span>
+              {cv.meta.permis && (
+                <span className="cv-hero__badge">{cv.meta.permis}</span>
+              )}
             </div>
+            {cv.meta.availability && (
+              <div className="cv-hero__availability">
+                <span className="cv-hero__availability-dot" />
+                {cv.meta.availability}
+              </div>
+            )}
             <div className="cv-hero__links">
               <a href={`mailto:${cv.meta.contact.email}`}>{cv.meta.contact.email}</a>
               <a href={cv.meta.contact.github} target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -54,15 +63,41 @@ function CvView() {
           </div>
         </section>
 
+        {/* ── Soft Skills ── */}
+        {cv.soft_skills && cv.soft_skills.length > 0 && (
+          <section className="cv-section">
+            <h2 className="cv-section__heading">
+              <span className="cv-section__icon">~</span> Savoir-etre
+            </h2>
+            <div className="cv-soft-skills">
+              {cv.soft_skills.map((skill) => (
+                <div key={skill.name} className="cv-soft-skill">
+                  <span className="cv-soft-skill__name">{skill.name}</span>
+                  <span className="cv-soft-skill__desc">{skill.description}</span>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
         {/* ── Skills ── */}
         <section className="cv-section">
           <h2 className="cv-section__heading">
             <span className="cv-section__icon">~</span> Competences
           </h2>
           <div className="cv-skills">
-            {Object.entries(cv.skills).map(([category, skills]) => (
-              <SkillGroup key={category} category={category} skills={skills} />
-            ))}
+            {Object.entries(cv.skills).map(([category, skills]) => {
+              if (category === "legacy_tech" && (!skills || skills.length === 0)) {
+                return (
+                  <div key={category} className="cv-skill-group">
+                    <h3 className="cv-skill-group__title">legacy tech</h3>
+                    <p className="cv-skill-group__empty">—</p>
+                  </div>
+                );
+              }
+              if (!skills || skills.length === 0) return null;
+              return <SkillGroup key={category} category={category} skills={skills} />;
+            })}
           </div>
         </section>
 

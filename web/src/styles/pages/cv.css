@@ -129,6 +129,31 @@
   color: var(--accent);
 }
 
+.cv-hero__availability {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  color: var(--success);
+  font-weight: 600;
+  margin-top: var(--space-xs);
+}
+
+.cv-hero__availability-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--success);
+  flex-shrink: 0;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
 @media (min-width: 768px) {
   .cv {
     gap: var(--space-3xl);
@@ -153,6 +178,48 @@
   .cv-hero__badges,
   .cv-hero__links {
     justify-content: flex-start;
+  }
+
+  .cv-hero__availability {
+    justify-content: flex-start;
+  }
+}
+
+/* ── Soft Skills ── */
+.cv-soft-skills {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-sm);
+}
+
+.cv-soft-skill {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--space-sm) var(--space-md);
+  border-left: 2px solid var(--border);
+  transition: border-color var(--transition-fast);
+}
+
+.cv-soft-skill:hover {
+  border-left-color: var(--accent);
+}
+
+.cv-soft-skill__name {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.cv-soft-skill__desc {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+@media (min-width: 768px) {
+  .cv-soft-skills {
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   }
 }
 
@@ -266,6 +333,13 @@
   gap: 6px;
 }
 
+.cv-skill-group__empty {
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  padding-left: 4px;
+}
+
 @media (min-width: 768px) {
   .cv-skills {
     grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
@@ -342,10 +416,43 @@
   width: fit-content;
 }
 
+.cv-card__context {
+  font-size: 0.7rem;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  font-style: italic;
+}
+
 .cv-card__desc {
   font-size: var(--text-sm);
   color: var(--text-secondary);
   line-height: var(--leading-normal);
+}
+
+.cv-card__highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.cv-card__highlight {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: var(--leading-normal);
+  padding-left: var(--space-md);
+  position: relative;
+}
+
+.cv-card__highlight::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-weight: 700;
 }
 
 @media (min-width: 768px) {
